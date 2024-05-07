@@ -20,52 +20,82 @@
       text-align: center;
       padding: 100px 0;
     }
+    .section-title {
+      margin-top: 80px;
+      text-align: center;
+    }
     .card {
       margin-bottom: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
+<!-- Encabezado -->
 <div class="jumbotron">
-  <h1 class="display-4">Cuidado del Medio Ambiente</h1>
-  <p class="lead">Ayudemos a proteger nuestro planeta para las futuras generaciones.</p>
+  <div class="container">
+    <h1 class="display-4">Cuidado del Medio Ambiente</h1>
+    <p class="lead">Ayudemos a proteger nuestro planeta para las futuras generaciones.</p>
+  </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Reciclaje</h5>
-          <p class="card-text">Aprende sobre la importancia del reciclaje y cómo puedes contribuir.</p>
-          <a href="#" class="btn btn-primary">Leer más</a>
-        </div>
+<!-- Sección de Reciclaje -->
+<section id="reciclaje" class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Reciclaje</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>El reciclaje es fundamental para reducir la cantidad de desechos que van a parar a los vertederos y contaminan el medio ambiente. Aprende cómo puedes reciclar correctamente y hacer tu parte para proteger nuestro planeta.</p>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Energías Renovables</h5>
-          <p class="card-text">Descubre cómo las energías renovables pueden ayudar a combatir el cambio climático.</p>
-          <a href="#" class="btn btn-primary">Leer más</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Conservación de la Biodiversidad</h5>
-          <p class="card-text">Conoce la importancia de conservar la biodiversidad y cómo puedes contribuir.</p>
-          <a href="#" class="btn btn-primary">Leer más</a>
-        </div>
+      <div class="col-md-6">
+        <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="Reciclaje">
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Sección de Energías Renovables -->
+<section id="energias-renovables">
+  <div class="container">
+    <h2 class="section-title">Energías Renovables</h2>
+    <div class="row">
+      <div class="col-md-6 order-md-2">
+        <p>Las energías renovables, como la solar y la eólica, son clave para reducir nuestra dependencia de los combustibles fósiles y mitigar el cambio climático. Descubre cómo funcionan y cómo puedes aprovecharlas en tu vida diaria.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="Energías Renovables">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Conservación de la Biodiversidad -->
+<section id="biodiversidad" class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Conservación de la Biodiversidad</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>La biodiversidad es esencial para mantener los ecosistemas saludables y equilibrados. Aprende cómo puedes contribuir a la conservación de la biodiversidad y proteger las especies en peligro de extinción.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="Conservación de la Biodiversidad">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pie de página -->
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Cuidado del Medio Ambiente. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
 <!-- Bootstrap JS y Popper.js (opcional) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
