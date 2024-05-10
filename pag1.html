@@ -11,33 +11,147 @@
     /* Estilos personalizados */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f8f9fa;
       padding-top: 20px;
       padding-bottom: 20px;
     }
     .jumbotron {
-      background-image: url(imagenes/descargaa.jpeg);
-      background-size: normal;
+      background-image: url('imagenes/descargaa.jpeg');
+      background-size: cover;
       color: #fff;
       text-align: center;
       padding: 100px 0;
       margin-bottom: 30px;
+      border-radius: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .section-title {
       text-align: center;
       margin-bottom: 30px;
+      color: #333;
+      text-transform: uppercase;
     }
     .container {
       margin-bottom: 30px;
     }
     .card {
       margin-bottom: 20px;
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .recommendations {
+      background-color: #f8f9fa;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    .recommendations h3 {
+      color: #333;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .recommendations ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .recommendations ul li {
+      color: #666;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .recommendations ul li:before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #17a2b8;
     }
     footer {
       background-color: #333;
       color: #fff;
       padding: 40px 0;
       text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+    .animated-bg {
+      position: relative;
+      background-color: #ffffff;
+      animation: gradient 10s ease infinite;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .animated-bg-text {
+      position: relative;
+      overflow: hidden;
+    }
+    .animated-bg-text:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+      animation: slide 2s linear infinite;
+    }
+    @keyframes slide {
+      100% {
+        left: 100%;
+      }
+    }
+    .highlight {
+      background-color: #17a2b8;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+    .bg-dots {
+      position: relative;
+      background-color: #f8f9fa;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .bg-dots:before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      top: -100px;
+      left: -100px;
+      z-index: -1;
+    }
+    .bg-dots:after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      top: 50px;
+      right: -200px;
+      z-index: -1;
     }
   </style>
 </head>
@@ -52,7 +166,7 @@
 </div>
 
 <!-- Sección de Deforestación -->
-<section id="deforestacion" class="bg-light">
+<section id="deforestacion" class="bg-dots">
   <div class="container">
     <h2 class="section-title">Deforestación en Colombia</h2>
     <div class="row">
@@ -63,11 +177,26 @@
         <img src="imagenes/202404081105086.jpg" class="img-fluid" alt="Deforestación en Colombia">
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="recommendations">
+          <h3>Recomendaciones para abordar la deforestación en Colombia:</h3>
+          <ul>
+            <li>Promover el uso de tecnologías sostenibles en la industria forestal.</li>
+            <li>Fomentar la educación ambiental y la conciencia sobre la importancia de los bosques.</li>
+            <li>Establecer áreas protegidas y reservas naturales para conservar la biodiversidad.</li>
+            <li>Implementar políticas de reforestación y restauración de ecosistemas degradados.</li>
+            <li>Involucrar a las comunidades locales en la gestión sostenible de los recursos forestales.</li>
+            <li>Apoyar proyectos de investigación para desarrollar soluciones innovadoras para la conservación de los bosques.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Sección de Contaminación Atmosférica -->
-<section id="contaminacion-atmosferica">
+<section id="contaminacion-atmosferica" class="bg-light">
   <div class="container">
     <h2 class="section-title">Contaminación Atmosférica en Colombia</h2>
     <div class="row">
@@ -78,11 +207,26 @@
         <img src="imagenes/slider-atmosferas-1-1.jpg" class="img-fluid" alt="Contaminación Atmosférica en Colombia">
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="recommendations">
+          <h3>Recomendaciones para abordar la contaminación atmosférica en Colombia:</h3>
+          <ul>
+            <li>Promover el uso de transporte público y vehículos eléctricos para reducir las emisiones de gases contaminantes.</li>
+            <li>Implementar programas de control de emisiones industriales y regulaciones más estrictas para las empresas.</li>
+            <li>Incentivar la plantación de árboles y la creación de áreas verdes urbanas para mejorar la calidad del aire.</li>
+            <li>Educar a la población sobre los efectos nocivos de la contaminación atmosférica y la importancia de reducir las emisiones.</li>
+            <li>Desarrollar estrategias de gestión de residuos sólidos para minimizar la quema al aire libre y la generación de gases contaminantes.</li>
+            <li>Invertir en tecnologías limpias y energías renovables para disminuir la dependencia de los combustibles fósiles.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Pie de página -->
-<footer>
+<footer class="bg-dark">
   <div class="container">
     <p>&copy; 2024 Problemas Climáticos en Colombia. Todos los derechos reservados.</p>
   </div>
@@ -95,3 +239,5 @@
 
 </body>
 </html>
+
+
