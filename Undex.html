@@ -11,7 +11,7 @@
     /* Estilos personalizados */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f8f9fa;
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -22,22 +22,98 @@
       text-align: center;
       padding: 100px 0;
       margin-bottom: 30px;
+      border-bottom: 6px solid #28a745;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+    .jumbotron h1 {
+      font-weight: bold;
+    }
+    .jumbotron p {
+      font-size: 20px;
     }
     .section-title {
       text-align: center;
       margin-bottom: 30px;
+      font-size: 28px;
+      color: #333;
+      font-weight: bold;
     }
     .container {
       margin-bottom: 30px;
     }
     .card {
       margin-bottom: 20px;
+      border: 2px solid #28e05f;
+      border-radius: 10px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-weight: bold;
+      font-size: 24px;
+      color: #28e05f;
+    }
+    .card-text {
+      color: #666;
     }
     footer {
       background-color: #333;
       color: #fff;
       padding: 40px 0;
       text-align: center;
+    }
+    .recommendations {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .recommendations h3 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .recommendations ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .recommendations ul li {
+      color: #666;
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .recommendations ul li:before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #28a745;
+      font-size: 20px;
+      line-height: 1;
+    }
+    .info-box {
+      background-color: #fff;
+      border: 2px solid #dc3545;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .info-box h4 {
+      color: #dc3545;
+      margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .info-box p {
+      color: #666;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -46,8 +122,8 @@
 <!-- Encabezado -->
 <div class="jumbotron">
   <div class="container">
-    <h1 class="display-4">Cuidado del Medio Ambiente en Colombia</h1>
-    <p class="lead">Tomemos acción contra el cambio climático y la contaminación en Colombia.</p>
+    <h1>Cuidado del Medio Ambiente en Colombia</h1>
+    <p class="lead">Tomemos conciencia y acciones contra el cambio climático y la contaminación en Colombia.</p>
   </div>
 </div>
 
@@ -57,11 +133,26 @@
     <h2 class="section-title">Cambio Climático en Colombia</h2>
     <div class="row">
       <div class="col-md-6">
-        <p>El cambio climático es uno de los problemas más urgentes que enfrenta Colombia. Las emisiones de gases de efecto invernadero están causando un aumento en la temperatura, lo que afecta los ecosistemas colombianos, incluyendo bosques tropicales, páramos y ecosistemas marinos. Esto puede provocar impactos graves como deslizamientos de tierra, pérdida de biodiversidad y escasez de agua. Es crucial reducir las emisiones y adaptarse a los impactos del cambio climático en Colombia.</p>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Impacto del Cambio Climático</h4>
+            <p class="card-text">El cambio climático es uno de los problemas más urgentes que enfrenta Colombia. Las emisiones de gases de efecto invernadero están causando un aumento en la temperatura, lo que afecta los ecosistemas colombianos, incluyendo bosques tropicales, páramos y ecosistemas marinos.</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
         <img src="imagenes/descargas.jpeg" class="img-fluid" alt="Cambio Climático en Colombia">
       </div>
+    </div>
+    <div class="recommendations">
+      <h3>Recomendaciones para abordar el cambio climático en Colombia:</h3>
+      <ul>
+        <li>Promover el uso de energías renovables como la solar y la eólica.</li>
+        <li>Implementar políticas para reducir las emisiones de gases de efecto invernadero en sectores clave como la agricultura y el transporte.</li>
+        <li>Invertir en investigación y desarrollo de tecnologías limpias y eficientes en energía.</li>
+        <li>Fomentar la reforestación y la conservación de los ecosistemas naturales.</li>
+        <li>Crear conciencia pública sobre la importancia de tomar medidas contra el cambio climático.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -72,11 +163,26 @@
     <h2 class="section-title">Contaminación en Colombia</h2>
     <div class="row">
       <div class="col-md-6">
-        <p>La contaminación del aire, el agua y el suelo es un problema grave en Colombia. Las actividades industriales, agrícolas y urbanas generan contaminantes que afectan la calidad del aire, los ríos y los suelos del país. Esto puede provocar problemas de salud, como enfermedades respiratorias y problemas dermatológicos, así como daños a los ecosistemas naturales. Es crucial implementar políticas y prácticas que reduzcan la contaminación y promuevan un desarrollo sostenible en Colombia.</p>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Impacto de la Contaminación</h4>
+            <p class="card-text">La contaminación del aire, el agua y el suelo es un problema grave en Colombia. Las actividades industriales, agrícolas y urbanas generan contaminantes que afectan la calidad del aire, los ríos y los suelos del país.</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
         <img src="imagenes/durisima.jpeg" class="img-fluid" alt="Contaminación en Colombia">
       </div>
+    </div>
+    <div class="recommendations">
+      <h3>Recomendaciones para abordar la contaminación en Colombia:</h3>
+      <ul>
+        <li>Promover prácticas industriales y agrícolas sostenibles que reduzcan las emisiones y la contaminación.</li>
+        <li>Implementar políticas de gestión de residuos efectivas para reducir la contaminación del suelo y el agua.</li>
+        <li>Fomentar el uso de transporte público y vehículos eléctricos para reducir la contaminación del aire.</li>
+        <li>Educar a la población sobre la importancia de adoptar comportamientos más sostenibles.</li>
+        <li>Invertir en tecnologías de control de la contaminación y monitoreo ambiental.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -95,6 +201,9 @@
 
 </body>
 </html>
+
+
+
 
 
 
