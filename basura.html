@@ -1,90 +1,243 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organizador de Tareas - Medio Ambiente</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wQV3H3VzifV4LY+3qizPBvzAVFsu2IUwZ6uFWHYHPwSX/4Y8x4t+1eStqIN3whlD" crossorigin="anonymous">
-  <!-- Estilos personalizados -->
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      margin-top: 50px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .task-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    .task-item {
-      margin-bottom: 10px;
-      background-color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .task-completed {
-      text-decoration: line-through;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por qué no arrojar basura y cómo nos afecta</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #4CAF50;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Nuevo */
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            margin-top: 40px;
+        }
+        .quote {
+            background-color: #f2f2f2;
+            border-left: 6px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tips {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tip {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .tip h3 {
+            color: #4CAF50;
+            margin-bottom: 5px;
+        }
+        .tip p {
+            margin-bottom: 5px;
+        }
+        .tip img {
+            float: left;
+            margin-right: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .author {
+            font-style: italic;
+            color: #777;
+            text-align: right;
+            margin-top: 10px;
+        }
+        .decoration {
+            height: 20px;
+            background: linear-gradient(90deg, #4CAF50, #333, #4CAF50);
+            margin-bottom: 20px;
+        }
+        .attention {
+            font-size: 24px;
+            color: #FF5722;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .fancy-box {
+            background-color: #f2f2f2;
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+        .fancy-box h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .fancy-box p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .fancy-box img {
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+        }
+        /* Nuevas reglas de estilo */
+        .copyright {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            margin-top: 40px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
+        <h1>Por qué no arrojar basura y cómo nos afecta</h1>
+    </header>
     <div class="container">
-      <a class="navbar-brand" href="#">Organizador de Tareas - Medio Ambiente</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Sobre el Proyecto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contacto</a>
-          </li>
-        </ul>
-      </div>
+        <div class="attention">¡Cuidemos nuestro planeta!</div>
+        <div class="decoration"></div>
+        <img src="imagen1.jpg" alt="Imagen 1">
+        <p>
+            Arrojar basura al medio ambiente es una práctica dañina que afecta nuestra salud, la biodiversidad y el equilibrio ecológico. Cada año, toneladas de desechos contaminan nuestros océanos, ríos y suelos, causando graves impactos ambientales y sociales.
+        </p>
+        <div class="decoration"></div>
+        <img src="imagen2.jpg" alt="Imagen 2">
+        <p>
+            La basura desechada incorrectamente contamina el agua que bebemos y los alimentos que consumimos. Además, puede representar un peligro para la vida silvestre, ya que los animales pueden quedar atrapados en los desechos o ingerirlos, lo que provoca lesiones e incluso la muerte.
+        </p>
+        <div class="decoration"></div>
+        <div class="quote">
+            <p>La basura que arrojamos hoy, es el problema que enfrentaremos mañana.</p>
+        </div>
+        <div class="decoration"></div>
+        <div class="tips">
+            <h2>Consejos para reducir la basura:</h2>
+            <div class="tip">
+                <img src="reducir.png" alt="Icono Reducir">
+                <h3>1. Reduce el consumo de plástico</h3>
+                <p>Opta por productos reutilizables en lugar de desechables y lleva tu propia bolsa de tela al hacer compras.</p>
+            </div>
+            <div class="tip">
+                <img src="reciclar.png" alt="Icono Reciclar">
+                <h3>2. Recicla siempre que sea posible</h3>
+                <p>Clasifica tus residuos y deposítalos en los contenedores de reciclaje adecuados.</p>
+            </div>
+            <div class="tip">
+                <img src="limpieza.png" alt="Icono Limpieza">
+                <h3>3. Participa en limpiezas comunitarias</h3>
+                <p>Únete a actividades de limpieza de playas, parques y calles en tu comunidad.</p>
+            </div>
+        </div>
+        <div class="decoration"></div>
+        <img src="imagen3.jpg" alt="Imagen 3">
+        <p>
+            El problema de la basura no solo afecta al medio ambiente, sino también a la economía y la calidad de vida de las personas. La limpieza de desechos representa un costo considerable para los gobiernos y las comunidades, y la presencia de basura en áreas públicas puede disminuir el atractivo turístico y el valor de las propiedades.
+        </p>
+        <p>
+            Además, la basura contribuye al cambio climático al liberar gases de efecto invernadero cuando se descompone. Esto agrava los problemas ambientales existentes, como el calentamiento global y la degradación de los ecosistemas.
+        </p>
+        <p>
+            Es fundamental que tomemos conciencia sobre el impacto de nuestros hábitos de consumo y aprendamos a reducir, reutilizar y reciclar nuestros desechos. Al tomar medidas para minimizar nuestra generación de basura y disponer adecuadamente de los desechos, podemos proteger el medio ambiente y asegurar un futuro sostenible para las generaciones venideras.
+        </p>
+        <div class="fancy-box">
+            <h2>¡Cuida el planeta!</h2>
+            <p>Pequeños cambios hacen grandes diferencias. Sé parte del cambio y ayuda a preservar nuestro hogar.</p>
+        </div>
+        <div class="circle"></div>
+        <div class="fancy-box">
+            <h2>¡Únete a la causa!</h2>
+            <p>Encuentra organizaciones locales que se dediquen a la conservación del medio ambiente y únete a ellas. Tu apoyo es vital para hacer la diferencia.</p>
+        </div>
+        <a href="otra_pagina.html" class="button">Volver</a>
+        <div class="decoration"></div>
     </div>
-  </nav>
-
-  <!-- Contenido principal -->
-  <div class="container mt-5">
-    <h1>Bienvenido al Organizador de Tareas con Enfoque en el Medio Ambiente</h1>
-    <p>¡Bienvenido! En esta plataforma, no solo nos preocupamos por la eficiencia en tus tareas diarias, sino también por el cuidado del medio ambiente. Aquí encontrarás una manera de organizar tus actividades cotidianas de manera sostenible y amigable con el entorno. ¡Únete a nosotros en este compromiso! En esta plataforma, no solo nos preocupamos por la eficiencia en tus tareas diarias, sino también por el cuidado del medio ambiente. Aquí encontrarás una manera de organizar tus actividades cotidianas de manera sostenible y amigable con el entorno. ¡Únete a nosotros en este compromiso! En esta plataforma, no solo nos preocupamos por la eficiencia en tus tareas diarias, sino también por el cuidado del medio ambiente. Aquí encontrarás una manera de organizar tus actividades cotidianas de manera sostenible y amigable con el entorno. ¡Únete a nosotros en este compromiso!</p>
-    <img src="imagenes/descarga (1).png" alt="Nueva imagen de naturaleza" class="img-fluid">
-    <h2>Tus Tareas</h2>
-    <ul class="task-list">
-      <li class="task-item">Hacer la compra de alimentos</li>
-      <li class="task-item">Terminar el informe del proyecto</li>
-      <li class="task-item task-completed">Preparar la presentación para la reunión</li>
-      <li class="task-item">Llamar al cliente para confirmar la cita</li>
-      <li class="task-item">Hacer ejercicio durante 30 minutos</li>
-    </ul>
-    
-    <h2>Agregar Nueva Tarea</h2>
-    <form>
-      <div class="mb-3">
-        <label for="taskInput" class="form-label">Descripción de la tarea</label>
-        <input type="text" class="form-control" id="taskInput" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Agregar Tarea</button>
-    </form>
-  </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pwnEJsUCYoN0qQ63gJDx3lwpO2IGJsCb4LAsTm0jPj9UyEW5Fsk3IKazieClTm9g" crossorigin="anonymous"></script>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2024 - Por qué no arrojar basura y cómo nos afecta</p>
+        </div>
+    </footer>
 </body>
 </html>
-
