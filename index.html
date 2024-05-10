@@ -1,1 +1,174 @@
-<s></s>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medio Ambiente</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wQV3H3VzifV4LY+3qizPBvzAVFsu2IUwZ6uFWHYHPwSX/4Y8x4t+1eStqIN3whlD" crossorigin="anonymous">
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 50px;
+    }
+    .header {
+      background-color: #4CAF50;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .header button {
+      margin: 0 10px;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #fff;
+      color: #4CAF50;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .header button:hover {
+      background-color: #45a049;
+      color: #fff;
+    }
+    .content {
+      padding: 20px;
+      padding-top: 80px; /* Añadido para compensar la barra de navegación fija */
+    }
+    .content h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: #4CAF50;
+      text-decoration: underline;
+      text-decoration-color: #45a049;
+    }
+    .content p {
+      font-size: 20px;
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .big-button-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .big-button {
+      padding: 20px 40px;
+      font-size: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .big-button:hover {
+      background-color: #45a049;
+    }
+    .img-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .img-container img {
+      width: 60%;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .decorative-line {
+      background-color: #4CAF50;
+      height: 5px;
+      width: 100%;
+      margin: 30px auto;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 0 0 8px 8px;
+      margin-top: 40px;
+    }
+    .copyright {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con botones -->
+  <div class="header">
+    <button onclick="window.location.href='pagina1.html'">Introducción</button>
+    <button onclick="window.location.href='pagina2.html'">Reciclaje de Basura</button>
+    <button onclick="window.location.href='pagina3.html'">Contaminación Ambiental</button>
+    <button onclick="window.location.href='pagina4.html'">Deforestación</button>
+    <button onclick="window.location.href='pagina5.html'">Cambio Climático</button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="container mt-5 content">
+    <h1>Bienvenido al Medio Ambiente</h1>
+    <div id="intro">
+      <p>¡Bienvenido! En esta plataforma, nos preocupamos por el cuidado del medio ambiente. Aquí encontrarás información sobre diferentes temas ambientales y cómo puedes contribuir a su conservación. Nos enfocamos en promover la importancia de prácticas sostenibles y en educar sobre los efectos de nuestras acciones en el entorno natural.</p>
+      <p>El medio ambiente es un recurso invaluable que debemos proteger para las generaciones futuras. A través de la conciencia y la acción, podemos marcar la diferencia y preservar la biodiversidad, los ecosistemas y la calidad de vida en nuestro planeta.</p>
+      <p>Explora los siguientes temas y descubre cómo puedes hacer tu parte para cuidar nuestro hogar común:</p>
+    </div>
+    <div id="recycling">
+      <h2>Reciclaje de Basura</h2>
+      <p>Aquí encontrarás información sobre cómo reciclar correctamente y la importancia de reducir, reutilizar y reciclar los materiales para minimizar el impacto ambiental.</p>
+      <div class="img-container">
+        <img src="imagenes/reciclar.jpg" alt="Reciclar Basura">
+      </div>
+    </div>
+    <div id="pollution">
+      <h2>Contaminación Ambiental</h2>
+      <p>Descubre los diferentes tipos de contaminación ambiental y cómo afectan a los ecosistemas, así como las acciones que podemos tomar para reducir la contaminación en nuestro entorno.</p>
+      <div class="img-container">
+        <img src="imagenes/contaminacion.jpg" alt="Contaminación Ambiental">
+      </div>
+    </div>
+    <div id="deforestation">
+      <h2>Deforestación</h2>
+      <p>Explora las causas y consecuencias de la deforestación y aprende sobre las iniciativas de reforestación y conservación de bosques en todo el mundo.</p>
+      <div class="img-container">
+        <img src="imagenes/deforestacion.jpg" alt="Deforestación">
+      </div>
+    </div>
+    <div id="climate">
+      <h2>Cambio Climático</h2>
+      <p>Conoce más sobre el cambio climático, sus efectos en el medio ambiente y cómo podemos tomar medidas para mitigar sus impactos y promover la sostenibilidad.</p>
+      <div class="img-container">
+        <img src="imagenes/cambio_climatico.jpg" alt="Cambio Climático">
+      </div>
+    </div>
+    <div class="decorative-line"></div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="container">
+      <p class="copyright">&copy; 2024 - Medio Ambiente</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pwnEJsUCYoN0qQ63gJDx3lwpO2IGJsCb4LAsTm0jPj9UyEW5Fsk3IKazieClTm9g" crossorigin="anonymous"></script>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
